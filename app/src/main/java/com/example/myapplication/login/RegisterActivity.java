@@ -164,7 +164,6 @@ public class RegisterActivity extends AppCompatActivity {
         // 이름, 비번, 이메일 조건 체크
         validateUsername();
         validatePassword();
-
         validateEmail();
 
 
@@ -191,8 +190,7 @@ public class RegisterActivity extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
                             // 회원가입성공
-//                            if (userPassword.equals(userPasswordCheck)) {
-//                            if (userPassword) {
+
                                 if (success) {
                                     Toast.makeText(getApplicationContext(), "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);

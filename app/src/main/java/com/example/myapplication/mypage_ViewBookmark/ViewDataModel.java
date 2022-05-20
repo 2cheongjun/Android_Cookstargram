@@ -59,10 +59,6 @@ public class ViewDataModel  implements Serializable {
         return cb_heart;
     }
 
-//    public String getBookmark() {
-//        return bookmark;
-//    }
-
     public void setCb_heart(boolean b) {
         this.cb_heart = b;
     }

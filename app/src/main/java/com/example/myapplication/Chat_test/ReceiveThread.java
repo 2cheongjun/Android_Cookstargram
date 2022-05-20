@@ -20,9 +20,8 @@ class ReceiveThread extends Thread {
     String read;
     Context context;
     private static final String TAG = "ReceiveThread";
-    private String ip = "192.168.0.12"; // 우리집
-//    private String ip = "192.168.0.57"; // 6사 IP
-//    private String ip = "192.168.0.146"; // 7사
+    private String ip = "000.000.0.00"; // 우리집
+
     Socket socket;
     private final int port = 6016;
     PrintWriter sendMessage;

@@ -20,7 +20,6 @@ public class InfoModifyActivity extends AppCompatActivity {
 
 
     private TextView tv_name, tv_logout;
-
     private ImageView ic_back;
     RequestQueue queue;
 

@@ -89,7 +89,7 @@ public class chatRoom2Activity extends AppCompatActivity {
     Socket socket;
     PrintWriter sendMessage;
     // 핸드폰하고,서버가 같은 아이피에 접속이 되어있어야함. 소켓에 텍스트 안써지면, IP를 확인하자
-    private String ip = "192.168.0.12"; // 우리집
+    private String ip = "000.000.0.00"; // 우리집
     private final int port = 6016;
     Button chatbutton;
     ListView mMessageListVIew;
@@ -146,8 +146,8 @@ public class chatRoom2Activity extends AppCompatActivity {
     private int count = 0; // 안읽음 갯수
 
 
-    // TODO 1120 ////////////////////////////////////////////////////////////////////////////////////
-    // 쓰레드중지, 소켓 닫기 // 쓰레드 문제?? // 알림을 보낼때 문제가 생기는 데 언제 닫아야하나? // 소켓연결을 한번만해도 되는것으로 변경이되었다.
+    // TODO 1120
+    // 쓰레드중지, 소켓 닫기 ,n소켓연결을 한번만해도 되는것으로 변경이되었다.
     @Override
     protected void onStop() {
         super.onStop();
@@ -236,12 +236,7 @@ public class chatRoom2Activity extends AppCompatActivity {
                 roomOK = pref2.getInt("구분자 생성 roomOK", -1); //키값, 디폴트값
                 Log.e(TAG, " roomOK 값 방에서 나감 /" + roomOK);
 
-
                 String room = "room out";
-//                selectChat(myID, friendID, roomIdx);
-                Log.e(TAG, "  /" + room);
-
-
                 /*
                  * 방을 나가는 순간 마지막 메시지 저장하기
                  */
@@ -421,7 +416,6 @@ public class chatRoom2Activity extends AppCompatActivity {
 
                                 message.setText(""); // 메시지 보내고 채팅창 비우기
                             }
-
 
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -819,7 +813,6 @@ public class chatRoom2Activity extends AppCompatActivity {
                 }
             }
             // 리스트뷰 클릭안되게 설정
-//            convertView.setEnabled(true); // 트루여야 안눌림
             convertView.setEnabled(false);
 
             return convertView;
@@ -958,7 +951,6 @@ public class chatRoom2Activity extends AppCompatActivity {
                             Bitmap resizedBmp = Bitmap.createScaledBitmap(image, (int) bmpWidth, (int) bmpHeight, true);
 
                             // 이미지업로드 -> 안에 올리기 가져오기 + 레트로핏조회
-
                             UploadImage(rotateImage(resizedBmp, 90));
 
 
@@ -1065,7 +1057,6 @@ public class chatRoom2Activity extends AppCompatActivity {
 
 
                 Log.e(TAG, "chat.read 값  /" + chat.read);
-
                 Log.e(TAG, "msg업데이트 chat isMe : " + chat.isMe);
                 Log.e(TAG, "msg업데이트 chatRoom2Activity : " + !chat.isMe + "");
 //
@@ -1258,7 +1249,7 @@ public class chatRoom2Activity extends AppCompatActivity {
     }
 
 
-    // TODO 볼리로 - 채팅시 갤러리로 가져온 이미지 보내기(이미지이름(name+image),내이름,친구이름,방이름,이미지타입을 서버에 전송하고 가져오기 /////////////////////////////////////
+    // TODO 볼리로 - 채팅시 갤러리로 가져온 이미지 보내기(이미지이름(name+image),내이름,친구이름,방이름,이미지타입을 서버에 전송하고 가져오기
     private void UploadImage(Bitmap reuduceBitmap) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         reuduceBitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);

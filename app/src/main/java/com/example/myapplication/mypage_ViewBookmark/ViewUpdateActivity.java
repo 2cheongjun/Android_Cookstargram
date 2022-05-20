@@ -57,7 +57,6 @@ import static com.example.myapplication.Api.Api.URL_COOK_POST_UPDATE;
 
 public class ViewUpdateActivity extends AppCompatActivity {
 
-
     // 갤러리에서 가져오기 버튼
     private ImageView iv_select;
     // 사진찍기버튼

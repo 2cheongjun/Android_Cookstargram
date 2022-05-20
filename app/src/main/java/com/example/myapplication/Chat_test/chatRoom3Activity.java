@@ -485,16 +485,12 @@ public class chatRoom3Activity extends AppCompatActivity {
         public String iv_profile_small; // 상대프로필사진
         public String myChatTimeImg; // 말풍선보낸시간
         public String chatImg_1; // 내가 보낸 이미지1
-        //public String chatImg_2;
-        //public String chatImg_3;
 
         // 상대에게 보이는 이미지
         public String chatImg_1_you;
         public String youChatTime_Img;
         public String youName_text_img;
         public String iv_profile_small_img;
-
-        //        public String roomidx = "";
         public String roomidx;
     }
 
@@ -897,8 +893,6 @@ public class chatRoom3Activity extends AppCompatActivity {
 
                             // 이미지업로드 -> 안에 올리기 가져오기 + 레트로핏조회
                             UploadImage(rotateImage(resizedBmp, 90));
-
-
                         }
                     }
                 } else if (uri != null) {
@@ -918,7 +912,7 @@ public class chatRoom3Activity extends AppCompatActivity {
 
 
     // TODO 메시지 업데이트 쓰레드
-    // 메시지 업데이트 쓰레드 ??++ 여기에 이미지는? 어떻게 넣죠?
+    // 메시지 업데이트 쓰레드
     class msgUpdate implements Runnable {
         private String msg;
 
@@ -989,10 +983,6 @@ public class chatRoom3Activity extends AppCompatActivity {
                 chat.myChatTimeImg = jsonObject.getString("chatTime");
                 chat.youChatTime = jsonObject.getString("chatTime");
                 chat.youChatTime_Img = jsonObject.getString("chatTime");
-
-//                chat.chatImg_1 = jsonObject.getString("img1");
-//                chat.chatImg_2 = jsonObject.getString("img2");
-//                chat.chatImg_3 = jsonObject.getString("img3");
 
                 // 방번호를 chat 클래스에 정보를 추가한다.
                 chat.roomidx = jsonObject.getString("roomIdx");
@@ -1179,7 +1169,7 @@ public class chatRoom3Activity extends AppCompatActivity {
     }
 
 
-    // TODO 볼리로 - 채팅시 갤러리로 가져온 이미지 보내기(이미지이름(name+image),내이름,친구이름,방이름,이미지타입을 서버에 전송하고 가져오기 /////////////////////////////////////
+    // TODO 볼리로 - 채팅시 갤러리로 가져온 이미지 보내기(이미지이름(name+image),내이름,친구이름,방이름,이미지타입을 서버에 전송하고 가져오기
     private void UploadImage(Bitmap reuduceBitmap) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         reuduceBitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);

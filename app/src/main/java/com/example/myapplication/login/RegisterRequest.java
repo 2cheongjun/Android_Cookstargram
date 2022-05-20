@@ -13,7 +13,7 @@ import static com.example.myapplication.login.Urls.REGISTER;
 
 public class RegisterRequest extends StringRequest {
 
-     // 서버 URL설정 (PHP파일 연동) //   aws주소
+     // 서버 URL설정 (PHP파일 연동)
       final static private String URL = REGISTER;
       private Map<String,String> map;
 

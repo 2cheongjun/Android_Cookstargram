@@ -19,7 +19,6 @@ import java.net.UnknownHostException;
 public class socketService extends Service {
     private static final String TAG = "socketService" + "백그라운드 서비스 실행";
 
-
     InetAddress serverAddr;
     Socket socket;
 

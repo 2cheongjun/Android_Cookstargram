@@ -3,7 +3,6 @@ package com.example.myapplication.Api;
 public class Api {
 
     public static final String BASE_URL = "http://3.37.202.166";
-
     // 포스트
     public static final String URL_COOK_POST_INSERT = BASE_URL + "/post/cookPostInsert.php";
     // 올린 글 조회

@@ -32,7 +32,6 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory"
         tools:targetApi="p">
-        <activity android:name=".ATest.ChattingRoom"></activity>
 
         <service
             android:name=".Chat_test.socketService"
@@ -98,11 +97,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ATest.startActivity" /> <!-- <activity android:name=".Chat_test.ResultActivity" /> -->
-        <!-- 노티피케이션 결과를 보여줄 액티비티 선언 -->
-        <activity
-            android:name=".ATest.ResultActivity"
-            android:parentActivityName=".ATest.startActivity"></activity>
+
         <activity android:name=".login.RegisterActivity" /> <!-- 내부저장소에 있는파일을 다른어플이 접근 할수있게해주는것 -->
         <provider
             android:name="androidx.core.content.FileProvider"

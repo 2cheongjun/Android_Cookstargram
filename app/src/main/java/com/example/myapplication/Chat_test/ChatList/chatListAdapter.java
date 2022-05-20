@@ -78,7 +78,6 @@ public class chatListAdapter extends RecyclerView.Adapter<chatListAdapter.Recycl
         holder.tv_postName.setText(friendID + "님과 채팅");
 //        holder.tv_postName.setText(roomName + "님과 채팅");
         holder.tv_comment.setText("눌러서 채팅하기");
-//        holder.tv_comment.setText(finalMessage);
 
         // 날짜 가져와서 ~시~분으로 보이게 하기 /오전 오후 표시
         String str = created;
@@ -88,20 +87,6 @@ public class chatListAdapter extends RecyclerView.Adapter<chatListAdapter.Recycl
         }else{
 
         }
-
-//        String result = str.substring(str.length()-3, str.length()); // 마지막3글자만 보이기
-
-
-        // TODO 안읽은메시지
-//        SharedPreferences prefsName = context.getSharedPreferences("unReadCount", MODE_PRIVATE);
-//        int fileChatCount = prefsName.getInt("unReadCount", 0); //키값, 디폴트값
-//        String getfriendID = prefsName.getString("friendID", "");
-//        if (getfriendID.equals(friendID)) {
-//            holder.tv_redDot.setText("" + fileChatCount); // 안읽은 메시지
-//        } else if(fileChatCount == 0){
-//            holder.tv_redDot.setVisibility(View.GONE);
-//        }
-
 
         // 프사 이미지 URI가져오기
         Uri url = Uri.parse(BASE_URL + "/upload/" + postImg);
@@ -144,7 +129,7 @@ public class chatListAdapter extends RecyclerView.Adapter<chatListAdapter.Recycl
             card_item.setOnClickListener(this);
         }
 
-        // 채팅방리스트에서 클릭시 ->>>>각 채팅방으로 이동하기 chatRoom2Activity로 이동
+        // 채팅방리스트에서 클릭시 ->각 채팅방으로 이동하기 chatRoom2Activity로 이동
         @Override
         public void onClick(View v) {
             itemClickListener.onItemClick(v, getAdapterPosition());
@@ -153,7 +138,6 @@ public class chatListAdapter extends RecyclerView.Adapter<chatListAdapter.Recycl
                 ChatDate chatInfo = chatItem.get(getAdapterPosition());
 
                 String listRoomIdx = chatInfo.getRoomIdx();
-//                Toast.makeText(context,roomIdx, Toast.LENGTH_SHORT).show();
 
                 String listFriend = chatInfo.getFriendID();
 
@@ -163,13 +147,6 @@ public class chatListAdapter extends RecyclerView.Adapter<chatListAdapter.Recycl
                 intent.putExtra("listRoomIdx", listRoomIdx); // 리스트에서 보낸 방번호
                 intent.putExtra("listFriend", listFriend); // 친구이름
                 context.startActivity(intent);
-
-
-                // TODO 방클릭할때 셰어드값 0으로 세팅
-//                SharedPreferences pref = context.getSharedPreferences("unReadCount", MODE_PRIVATE);
-//                SharedPreferences.Editor editor = pref.edit();
-//                editor.putInt("unReadCount", 0); //키값, 저장값
-//                editor.apply();
             }
         }
 

@@ -148,9 +148,6 @@ public class StoryReplyActivity extends AppCompatActivity implements StoryReplyN
         et_reply = (EditText) findViewById(R.id.et_reply);
         et_reply.requestFocus();
 
-        //키보드 보이게 하는 부분
-//        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-//        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
 
         // 화면 밀림방지
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);

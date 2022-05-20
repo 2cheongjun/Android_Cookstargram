@@ -720,11 +720,6 @@ public class chatRoomActivity extends AppCompatActivity {
 
                     Toast.makeText(chatRoomActivity.this, (CharSequence) img, Toast.LENGTH_SHORT).show();
 
-                    // 이미지 크게 띄우기
-//                    Intent intent = new Intent(chatRoomActivity.this, bigImageActivity.class);
-//                    intent.putExtra("img", img);
-//                    intent.putExtra("imgUri", imgUri);
-//                    startActivity(intent);
                 }
             });
 
@@ -928,10 +923,6 @@ public class chatRoomActivity extends AppCompatActivity {
                     if (type.equals("text")) { // 내용이 두번씩 감.
                         chat.message = finalMessage;// 메시지내용
                     }
-                    // TODO ????????????????????? 조건??
-                    // 브로드캐스트리시버에게 내가 정한 액션을 보낸다.
-//                    Intent intent = new Intent(MyReceiver.MY_ACTION);
-//                    sendBroadcast(intent);
                 }
                 // 상대방이름
                 chat.youName_text_img = friendID;
@@ -943,10 +934,6 @@ public class chatRoomActivity extends AppCompatActivity {
                 chat.myChatTimeImg = jsonObject.getString("chatTime");
                 chat.youChatTime = jsonObject.getString("chatTime");
                 chat.youChatTime_Img = jsonObject.getString("chatTime");
-
-//                chat.chatImg_1 = jsonObject.getString("img1");
-//                chat.chatImg_2 = jsonObject.getString("img2");
-//                chat.chatImg_3 = jsonObject.getString("img3");
 
                 // 방번호를 chat 클래스에 정보를 추가한다.
                 chat.roomidx = jsonObject.getString("roomIdx");
@@ -967,8 +954,6 @@ public class chatRoomActivity extends AppCompatActivity {
             mChatDataList.clear();
             String room = null;
             selectChat(myID, friendID, roomIdx); // 재조회를 해야 이미지가 사라지지 않았음
-
-
         }
     }
 
@@ -1183,7 +1168,6 @@ public class chatRoomActivity extends AppCompatActivity {
                             }
 
                         }
-
 
                     }, new com.android.volley.Response.ErrorListener() {
                 @Override

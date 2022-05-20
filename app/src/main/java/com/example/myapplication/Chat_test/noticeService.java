@@ -37,7 +37,6 @@ public class noticeService extends Service {
         // 인텐트로 startForeground 액션을 받았다면, ~ 한다.
         if ("startForeground".equals(intent.getAction())) {
             // 포그라운드 서비스 시작
-//            friendID = intent.getStringExtra("notifriendID");
             roomIdx = intent.getStringExtra("roomIdx"); // 못가져옴
 
             Log.e(TAG, " onStartCommand  /" + intent.getAction() + friendID +"채팅방에서 가져온 친구이름");
