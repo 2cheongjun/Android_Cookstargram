@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <!--구분선-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ddd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <!--프사썸네일 -->
+<!--                <ImageView-->
+<!--                    android:id="@+id/iv_profile_small_reply"-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:src="@drawable/cooker_man" />-->
+
+                <TextView
+                    android:id="@+id/tv_userID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/pretendardbold"
+                    android:text="userId"
+                    android:textColor="#6200ea" />
+                <!-- 댓글 내용 -->
+                <TextView
+                    android:id="@+id/tv_postIdx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="글번호!"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="7"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="댓글내용" />
+                <!--수정아이콘-->
+                <ImageView
+                    android:id="@+id/iv_modifyBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="0"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_outline_edit_24" />
+                <!--삭제아이콘-->
+                <ImageView
+                    android:id="@+id/iv_delBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_outline_delete_forever_24" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <!--날짜-->
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="6dp"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="날짜"
+                    android:textSize="12dp" />
+                <!--답글달기 -->
+                <TextView
+                    android:id="@+id/tv_reply_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/pretendardbold"
+                    android:text="답글 달기"
+                    android:textSize="13dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:background="#ddd" />-->
+        <!--구분선-->
+        <!--  자식 리사이클러뷰-->
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recipe_select.EditActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp">
+        
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="제목"
+            android:textSize="24sp"
+            android:inputType="textCapSentences"
+            tools:ighore="Autofill"
+            />
+
+
+        <EditText
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:hint="내용을 입력해주세요"
+            android:gravity="top|start"
+            android:textSize="24sp"
+            android:layout_marginTop="20dp"
+            android:minLines="6"
+            android:inputType="textMultiLine"
+            tools:ighore="Autofill"
+            />
+        
+        
+    </RelativeLayout>
+        
+
+</androidx.core.widget.NestedScrollView>

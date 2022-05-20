@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="#ffffff"
+    app:cardCornerRadius="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- 유저사진 + 이름 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_userImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="20dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/text_view_creator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="9"
+                android:fontFamily="@font/pretendardbold"
+                android:text="Creator Name"
+                android:textColor="#000222"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+            <!-- 더보기 버튼 -->
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:src="@drawable/ic_more"
+                app:tint="@color/lblFromName" />
+
+        </LinearLayout>
+
+
+        <!-- 포스팅 이미지 -->
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/post_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+
+            <!-- 좋아요 버튼 -->
+            <CheckBox
+                android:id="@+id/cb_heart"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignTop="@+id/tv_heartCount"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="6dp"
+                android:layout_toRightOf="@id/tv_heartCount"
+                android:adjustViewBounds="true"
+                android:background="@drawable/like_button"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/tv_heartCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="6dp"
+                android:fontFamily="@font/pretendardregular"
+                android:textColor="#666"
+                android:text="좋아요 1개 " />
+
+
+            <!--  댓글링크-->
+            <ImageView
+                android:id="@+id/tv_reply"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/cb_heart"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_reply"
+                android:backgroundTint="@color/black"
+                android:padding="20dp"
+                tools:ignore="NotSibling" />
+
+            <!-- 북마크 -->
+            <CheckBox
+                android:id="@+id/cb_bookmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/tv_reply"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/bookmark"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:button="@null"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="userId"
+                android:fontFamily="@font/pretendardbold"
+                android:textColor="#222" />
+            <!-- 작성자가 작성한 글 내용 -->
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/pretendardregular"
+                android:text="내가 쓴글 = 즐거운 개발 룰루!"
+                android:textColor="#222"
+                />
+        </LinearLayout>
+        <!-- 댓글 모두보기  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_replySumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendardregular"
+                android:text="댓글 3개 모두 보기" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_otherUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="otherUser"
+                android:fontFamily="@font/pretendardbold"
+                android:textColor="#666"
+                />
+            <!-- 작성자가 작성한 글 내용 -->
+            <TextView
+                android:id="@+id/tv_otherUserText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/pretendardregular"
+                android:text="댓글작성 1"
+                android:textColor="#666"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

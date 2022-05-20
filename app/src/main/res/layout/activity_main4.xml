@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/white" />
+        <!-- 백 아이콘 -->
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/chatName_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/pretendardbold"
+            android:text="대화상대"
+            android:textSize="18dp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="onStartForegroundService"
+            android:text="Button"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <!-- 리스트 뷰 -->
+    <!-- 스크롤 마지막걸로 android:transcriptMode="alwaysScroll"-->
+
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#C8E5FB"
+        android:divider="@android:color/transparent"
+        android:padding="4dp"
+        android:transcriptMode="alwaysScroll">
+
+    </ListView>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <!--채팅내용입력란-->
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:background="@color/bg_msg_input"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:textColor="@color/text_msg_input" />
+
+        <!-- 갤러리 아이콘 -->
+        <ImageView
+            android:id="@+id/iv_galleryBtn"
+            android:layout_width="10dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_image_chat">
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/chatbutton"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_btn_join"
+            android:text="전송"
+            android:layout_marginRight="4dp"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

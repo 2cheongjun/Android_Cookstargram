@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 프로필 이미지는 기본이미지로 설정-->
+    <!--상단프로필영역-->
+    <ImageView
+        android:id="@+id/iv_picture_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!--리스트시작 (설정, 약관 )-->
+    <RelativeLayout
+        android:id="@+id/note_title_area"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#ffffff">
+
+        <!-- 백 아이콘 -->
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <!-- 모두수정 연필 아이콘 -->
+
+        <!-- 채팅하기 버튼 -->
+        <Button
+            android:id="@+id/btn_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="19dp"
+            android:backgroundTint="#006A5C"
+            android:text="채팅하기">
+
+        </Button>
+
+        <ImageView
+            android:id="@+id/ic_profile_default"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="70dp"
+            android:adjustViewBounds="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_profile"
+            android:visibility="visible" />
+
+        <!--연필아이콘-->
+
+
+        <!--몽실이-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ic_profile_default"
+            android:layout_centerInParent="true"
+            android:text="userID"
+            android:fontFamily="@font/pretendardbold"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+
+        <!-- 한마디 적기-->
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="3dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="30dp"
+            android:text="한식을 좋아합니다."
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/note_area_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/note_title_area"
+        android:layout_marginTop="0dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <!--구분선-->
+        <View
+
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#EAEAEA" />
+
+        <!-- 시간표기-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_profile_bottom_line"
+            android:layout_marginTop="00dp"
+            android:orientation="horizontal"
+            android:weightSum="9">
+            <!--팔로잉수-->
+            <TextView
+                android:id="@+id/tv_mypostCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="999"
+                android:fontFamily="@font/pretendardbold"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+            <!--팔로잉수-->
+            <TextView
+                android:id="@+id/tv_friendCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="999"
+                android:fontFamily="@font/pretendardbold"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <!--팔로워수-->
+            <TextView
+                android:id="@id/tv_subsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="999"
+
+                android:fontFamily="@font/pretendardbold"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_profile_bottom_line"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:weightSum="9">
+            <!--팔로잉-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="게시물"
+                android:fontFamily="@font/pretendardmedium"
+                android:textColor="#666"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <!--팔로잉-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="팔로워"
+                android:fontFamily="@font/pretendardmedium"
+                android:textColor="#666"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+            <!--팔로워-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="팔로잉"
+                android:fontFamily="@font/pretendardmedium"
+                android:textColor="#666"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+        <!-- 팔로잉 버튼-->
+        <CheckBox
+            android:id="@+id/ch_btn_follow"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/follow_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="팔로잉 하기"
+
+            android:textColor="@color/black">
+
+        </CheckBox>
+
+        <!--구분선-->
+        <View
+            android:id="@+id/v_title_line"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:background="#EAEAEA" />
+
+
+        <!-- 메뉴 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--양쪽정렬을 위한 텍스트뷰 -->
+
+
+        </LinearLayout>
+        <!--구분선-->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#EAEAEA" />
+        <!-- 썸네일 리사이클러뷰-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_friend"
+            android:layout_width="match_parent"
+            android:layout_height="320dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#006a5c"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

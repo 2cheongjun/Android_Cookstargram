@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<!--    <item-->
+<!--        android:id="@+id/live"-->
+<!--        android:title="쿡Live"-->
+<!--        android:icon="@drawable/ic_baseline_live_tv_24"/>-->
+
+    <item
+        android:id="@+id/talk"
+        android:title="피드"
+        android:icon="@drawable/ic_baseline_feed_24"/>
+
+    <item
+        android:id="@+id/chatRoom"
+        android:title="채팅"
+        android:icon="@drawable/ic_baseline_chat_24"
+        />
+    <item
+        android:id="@+id/recipe"
+        android:title="구독레시피"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        />
+
+    <item
+        android:id="@+id/mypage"
+        android:title="마이페이지"
+        android:icon="@drawable/ic_baseline_person_24"
+        />
+
+</menu>

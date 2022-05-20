@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:com.demo="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/board_menu_group">
+
+    <item
+        android:id="@+id/itemModify"
+        android:title="수정하기"  />
+<!--        com.demo:showAsAction="always"-->
+    <item
+        android:id="@+id/itemDelete"
+        android:title="삭제하기" />
+
+    </group>
+
+</menu>

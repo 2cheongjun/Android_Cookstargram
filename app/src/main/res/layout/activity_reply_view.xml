@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    tools:context=".cookStargram_reply.ReplyViewActivity">
+
+    <!--상단 백버튼, 설정 타이틀-->
+    <RelativeLayout
+        android:id="@+id/note_title_area"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#ffffff"
+        tools:ignore="MissingConstraints">
+
+        <!-- 백 아이콘 -->
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow_back" />
+
+
+        <!--타이틀-->
+        <TextView
+            android:id="@+id/tv_note_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/pretendardregular"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="댓글"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <!-- 입력창,버튼 -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp">
+        <!--리사이클러뷰-->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--프사썸네일 -->
+                <ImageView
+                    android:id="@+id/iv_profile_small"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/cooker_man"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="6dp"
+                   />
+
+                <TextView
+                    android:id="@+id/tv_firstText_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/pretendardbold"
+                    android:padding="4dp"
+                    android:text="작성자이름"
+                    android:textAlignment="textStart"
+                    android:textSize="14dp"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/tv_firstText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:padding="4dp"
+                    android:text="게시글작성자가 쓴내용"
+                    android:textAlignment="textStart"
+                    android:textSize="14dp"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/replyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="530dp"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:background="#eaeaea"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- 댓글입력창 -->
+        <EditText
+            android:id="@+id/et_reply"
+            android:layout_width="354dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="60dp"
+            android:layout_weight="8"
+            android:hint="댓글 달기..."
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textSize="18sp"
+            tools:ignore="MissingConstraints,NestedWeights">
+
+            <requestFocus />
+        </EditText>
+        <!--게시 버튼-->
+        <Button
+            android:id="@+id/btn_write"
+            android:layout_width="88dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="70dp"
+            android:layout_weight="2"
+            android:text="게시"
+            app:backgroundTint="#4CAF50"
+            app:cornerRadius="20dp" />
+        <!--게시 버튼-->
+        <Button
+            android:id="@+id/btn_modify"
+            android:layout_width="88dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="70dp"
+            android:layout_weight="2"
+            android:text="수정"
+            android:visibility="gone"
+            app:backgroundTint="#4CAF50"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

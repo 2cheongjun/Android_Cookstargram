@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--  남의 말풍선-->
+    <TextView
+        android:id="@+id/tv_firstTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="4dp"
+        android:text="TIme"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:visibility="invisible"
+        tools:ignore="RtlCompat" />
+
+    <!-- 상대방-->
+    <LinearLayout
+        android:id="@+id/layout_you"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--프사썸네일 -->
+        <ImageView
+            android:id="@+id/iv_profile_small"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cooker_man" />
+
+        <!-- 대화상대 이름-->
+        <TextView
+            android:id="@+id/youName_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendardbold"
+            android:padding="4dp"
+            android:text="상대"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/bubble_you_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/thm_chatroom_message_bubble_you_bg"
+            android:text="sadfasdfasdfasdfasdfasdfasdf\nasdfasdfasdfasdfas" />
+
+        <TextView
+            android:id="@+id/youChatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="4dp"
+            android:text="현재시간"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <!-- 상대방이 이미지보낼때 뷰 -->
+    <LinearLayout
+        android:id="@+id/layout_you_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--프사썸네일 -->
+        <ImageView
+            android:id="@+id/iv_profile_small_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cooker_man" />
+
+        <!-- 대화상대 이름-->
+        <TextView
+            android:id="@+id/youName_text_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendardbold"
+            android:padding="4dp"
+            android:text="상대"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/chatImg_1_you"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/cooker_man" />
+
+        <TextView
+            android:id="@+id/youChatTime_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="4dp"
+            android:text="현재시간"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+
+
+    <!-- 나의 말풍선-->
+    <LinearLayout
+        android:id="@+id/layout_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+        <!-- 나의 말풍선-->
+        <TextView
+            android:id="@+id/tv_isRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="4dp"
+            android:text="읽음"
+            android:textSize="10dp"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/myChatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="4dp"
+            android:text="현재시간"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/bubble_me_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/thm_chatroom_message_bubble_me_bg"
+            android:text="sadfasdfasdfasdfasdfasdfasdf\nasdfasdfasdfasdfas" />
+    </LinearLayout>
+
+    <!-- 나의 말풍선 / 내가 이미지 보낼때 뷰-->
+    <LinearLayout
+        android:id="@+id/layout_me_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+        <!-- 나의 말풍선 이미지 ///내가이미지보낼때 시간 -->
+        <TextView
+            android:id="@+id/myChatTimeImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="4dp"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="10dp" />
+
+        <!-- 이미지영역-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/chatImg_1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/cooker_man" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
